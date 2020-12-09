@@ -19,26 +19,30 @@ public class menu{
              *This switch allows you to have an interactive menu
              */
             case 'm' -> {
-                System.out.println("    \nWelcome\n");
-                System.out.println("        You can choose between:\n");
-                System.out.println("---------------------------------------------------------------");
-                System.out.println("||");
-                System.out.println("||");
-                System.out.println("|     'quit', 'q' : to quit the system                        |");
-                System.out.println("---------------------------------------------------------------");
+                System.out.println(
+                        "    \nWelcome\n"+
+                        "        You can choose between:\n"+
+                        "---------------------------------------------------------------\n"+
+                        "|     'play', 'p' : to play at Colossal Cave                  |\n"+
+                        "|     'song', 's' : to listen music                           |\n"+
+                        "|     'quit', 'q' : to quit the system                        |\n"+
+                        "---------------------------------------------------------------\n"
+                );
                 chooseMenu = sc.next();
                 switch (chooseMenu) {
+                    case "p", "play" -> menu = 'p';
+                    case "s", "song" -> menu = 's';
                     case "q", "quit", "exit" -> menu = 'q';
-                    case "e", "re" -> menu = 'e';//changer de "..."
-                    case "z", "rz" -> menu = 'z';//changer de "..."
                     default -> printError();
                 }
             }
 
-            case 'e' -> {//changer de "..."
-                System.out.println();
+            case 'p' -> {
+                //call function "play" for colossal cave
 
-                System.out.println("");
+
+
+                System.out.println("Press 'r','return' to return to the menu or 'q','quit' to quit the program");
                 chooseMenu = sc.next();
                 switch (chooseMenu) {
                     case "r", "return", "exit" -> menu = 'm';
@@ -47,13 +51,17 @@ public class menu{
                 }
             }
 
-            case 'z' -> {//changer de "..."
+            case 's' -> {
+                //call function "music" to listen music
 
-                System.out.println("Press any button to return to the menu");
+
+
+                System.out.println("Press 'r','return' to return to the menu or 'q','quit' to quit the program");
                 chooseMenu = sc.next();
                 switch (chooseMenu) {
                     case "r", "return", "exit" -> menu = 'm';
                     case "q", "quit" -> menu = 'q';
+                    default -> printError();
                 }
             }
 
