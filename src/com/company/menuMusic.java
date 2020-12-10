@@ -10,6 +10,7 @@ public class menuMusic {
         System.out.println("Not a valid command");
     }
     public static char menuMusic (char menuMusic){
+        Playlist playlist1 = new Playlist();
         Scanner menuMusicSc = new Scanner(System.in);
         String chooseMenuMusic;
         switch (menuMusic){
@@ -25,9 +26,9 @@ public class menuMusic {
                 );
                 chooseMenuMusic = menuMusicSc.next();
                 switch (chooseMenuMusic) {
-                    case "playlist", "p" -> menuMusic = 'p';
-                    case "listen", "l" -> menuMusic = 'l';
-                    case "quit", "q" -> menuMusic = 'm';
+                    case "Playlist", "playlist", "p" -> menuMusic = 'p';
+                    case "Listen", "listen", "l" -> menuMusic = 'l';
+                    case "Quit", "quit", "q" -> menuMusic = 'm';
                     default -> printError();
                 }
             }
