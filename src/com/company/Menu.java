@@ -61,7 +61,7 @@ public class Menu {
                 System.out.println("");//menu for music to choose what you want
 
 
-                System.out.println("Type in " + "play" + " to start listening your playlist");
+                System.out.println("Type in 'play' to start listening your playlist");
                 for (int i = 0; i < playlist1.playlist.size(); i++) {
                     playlist1.playlist.get(1);
 
