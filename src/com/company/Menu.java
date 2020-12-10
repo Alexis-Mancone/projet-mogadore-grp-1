@@ -1,6 +1,6 @@
 package com.company;
 import java.util.Scanner;
-public class menu{
+public class Menu {
     public static void printError(){
         /**
          * When you write something wrong the function will send you the error message and allow you to start over
