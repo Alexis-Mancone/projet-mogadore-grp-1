@@ -17,10 +17,18 @@ public class Playlist extends SongDriver {
         playlist.add(song6);
     }
 
-    // Method to add son object in the playlist
+    // Method to add song object in the playlist
     public void addSong(String title, String artist, String duration){
         Song song = new Song(title, artist, duration);
         playlist.add(song);
+    }
+
+    //public void removeSong (String title) {}
+
+
+    // Method to remove song object from playlist
+    public void removeSong (int index) {
+        playlist.remove(index);
     }
 
 
