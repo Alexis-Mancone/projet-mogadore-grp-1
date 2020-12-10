@@ -1,5 +1,7 @@
 package com.company;
+
 import java.util.Scanner;
+
 public class Menu {
     public static void printError(){
         /**
@@ -52,8 +54,31 @@ public class Menu {
             }
 
             case 's' -> {
-                //call function "music" to listen music
 
+                Playlist playlist1 = new Playlist();
+
+                //call function "music" to listen music
+                System.out.println("");//menu for music to choose what you want
+
+
+                System.out.println("Type in " + "play" + " to start listening your playlist");
+                for (int i = 0; i < playlist1.playlist.size(); i++) {
+                    playlist1.playlist.get(1);
+
+                    System.out.println("Now playing : ");
+                }
+
+
+                Scanner musicSc = new Scanner(System.in);
+
+                System.out.println("Type in title, artist and duration");
+                String title = musicSc.nextLine();
+                String artist = musicSc.nextLine();
+                String duration = musicSc.nextLine();
+
+
+                playlist1.addSong(title, artist, duration);
+                System.out.println(playlist1.playlist);
 
 
                 System.out.println("Press 'r','return' to return to the menu or 'q','quit' to quit the program");

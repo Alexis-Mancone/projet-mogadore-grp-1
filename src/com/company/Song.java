@@ -3,10 +3,10 @@ package com.company;
 public class Song {
     private String title;
     private String artist;
-    private double duration;
+    private String duration;
 
 
-    public Song(String songTitle, String songArtist, double duration){
+    public Song(String songTitle, String songArtist, String duration){
         this.title = songTitle;
         this.artist = songArtist;
         this.duration = duration;
@@ -34,11 +34,11 @@ public class Song {
 
 
     // Getter and Setter Duration
-    public double getDuration() {
+    public String getDuration() {
         return duration;
     }
 
-    public void setDuration(double duration) {
+    public void setDuration(String duration) {
         this.duration = duration;
     }
 
