@@ -2,7 +2,7 @@ package com.company;
 import java.util.ArrayList;
 
 public class SongDriver {
-        Playlist one = new Playlist();
+        //Playlist one = new Playlist();
 
         Song song1 = new Song("Djomb","Bosh", "2.21");
         Song song2 = new Song("Fever","Dua Lipa, Angèle","4.05");

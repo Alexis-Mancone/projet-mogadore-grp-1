@@ -62,10 +62,24 @@ public class Menu {
 
 
                 System.out.println("Type in 'play' to start listening your playlist");
-                for (int i = 0; i < playlist1.playlist.size(); i++) {
-                    playlist1.playlist.get(1);
+                for (int i = 0; i < playlist1.playlist.size(); i++ ) {
 
-                    System.out.println("Now playing : ");
+                    Song song = playlist1.playlist.get(i);
+                    String songName = song.getTitle();
+                    String songArtist = song.getArtist();
+                    String songDuration = song.getDuration();
+                    System.out.println("Now playing : " + songName + " by " + songArtist + ". (Duration : " + songDuration + " mn)");
+
+                    System.out.println("\n" + "Type 'Skip' to skip song");
+                    Scanner scPlaying = new Scanner(System.in);
+                    String playingMenu = scPlaying.nextLine();
+
+                    switch (playingMenu) {
+                        default -> printError();
+                        case "Skip" -> {
+                            break;
+                        }
+                    }
                 }
 
 
