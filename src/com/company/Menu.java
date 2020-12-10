@@ -62,53 +62,10 @@ public class Menu {
                     menuMusic = com.company.menuMusic.menuMusic(menuMusic);
                 }
                 return 'm';
-                    /*Playlist playlist1 = new Playlist();
-
-                    //call function "music" to listen music
-                    System.out.println("");//menu for music to choose what you want
-
-                    System.out.println("Type in 'play' to start listening your playlist");
-                    for (int i = 0; i < playlist1.playlist.size(); i++) {
-
-                    Song song = playlist1.playlist.get(i);
-                    String songName = song.getTitle();
-                    String songArtist = song.getArtist();
-                    String songDuration = song.getDuration();
-                    System.out.println("Now playing : " + songName + " by " + songArtist + ". (Duration : " + songDuration + " mn)");
-
-                    System.out.println("\n" + "Type 'Skip' to skip song");
-                    Scanner scPlaying = new Scanner(System.in);
-                    String playingMenu = scPlaying.nextLine();
-
-                    switch (playingMenu) {
-                        default -> printError();
-                        case "Skip" -> {
-                            break;
-                        }
-                    }
-
-
-                    Scanner musicSc = new Scanner(System.in);
-
-                    System.out.println("Type in title, artist and duration");
-                    String title = musicSc.nextLine();
-                    String artist = musicSc.nextLine();
-                    String duration = musicSc.nextLine();
-
-
-                    playlist1.addSong(title, artist, duration);
-                    System.out.println(playlist1.playlist);
-
-                    System.out.println("Press 'r','return' to return to the menu or 'q','quit' to quit the program");
-                    chooseMenu = sc.next();
-                    switch (chooseMenu) {
-                        case "r", "return", "exit" -> menu = 'm';
-                        case "q", "quit" -> menu = 'q';
-                        default -> printError();
-                    }*/
-            }
 
             }
+
+        }
         return menu;
     }
 }
