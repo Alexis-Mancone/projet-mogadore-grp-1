@@ -33,6 +33,7 @@ public class Menu {
                                 "---------------------------------------------------------------\n"
                 );
                 chooseMenu = sc.next();
+                //a scanner that allows access to the game menu or the playlist management menu or to exit the program
                 switch (chooseMenu) {
                     case "p", "play" -> menu = 'p';
                     case "s", "song" -> menu = 's';
@@ -42,20 +43,18 @@ public class Menu {
             }
 
             case 'p' -> {
-                //call function "play" for colossal cave
+                //call menu to play at Colossal cave
+                char gameMenu = 'G';
 
-
-                System.out.println("Press 'r','return' to return to the menu or 'q','quit' to quit the program");
-                chooseMenu = sc.next();
-                switch (chooseMenu) {
-                    case "r", "return", "exit" -> menu = 'm';
-                    case "q", "quit" -> menu = 'q';
-                    default -> printError();
+                while ( gameMenu != 'm' ) {    //to quit the menu
+                    gameMenu = com.company.gameMenu.gameMenu(gameMenu);
                 }
+                return 'm';
+
             }
 
             case 's' -> {
-
+                //call menu to listen the music
                 char menuMusic = 'M';
 
                 while ( menuMusic != 'm' ) {    //to quit the menu
