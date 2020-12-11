@@ -1,6 +1,7 @@
 package com.company;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 public class Playlist extends SongDriver {
@@ -27,10 +28,20 @@ public class Playlist extends SongDriver {
 
 
     // Method to remove song object from playlist
-    public void removeSong (int index) {
-        playlist.remove(index);
+    public void removeSong (String title) {
+        Iterator<Song> songIt = playlist.iterator();
+        while (songIt.hasNext()) {
+            Song i = songIt.next();
+            String songName = i.getTitle();
+            if (songName.equals(title)) {
+                songIt.remove();
+            }
+        }
     }
 
+    public void removeSong (int number) {
+        playlist.remove(number);
+    }
 
 
     public void playSong(Song song){
